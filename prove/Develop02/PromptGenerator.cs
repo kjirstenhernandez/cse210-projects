@@ -5,19 +5,8 @@ public class PromptGenerator
 
     public string _userPromptResponse;
 
-    public string DisplayMenuOption()
-    {
-        Console.WriteLine("1.  Load from File");
-        Console.WriteLine("2.  New Entry");
-        Console.WriteLine("3.  Save to File");
-        Console.WriteLine("4.  Diplay All Entries");
-        Console.WriteLine("5.  Quit Program");
-        Console.WriteLine("Please enter your choice number:  ");
-        _menuChoice = Console.ReadLine();
-        return _menuChoice;
-    }
-
     public string GetPrompt()
+    // Displays prompts for Journal Entries
     {
        string[] prompts = {
         "What was something interesting that happened today?",
@@ -32,12 +21,5 @@ public class PromptGenerator
         int index = rand.Next(prompts.Length);       
        string _promptEntry = prompts[index];
        return _promptEntry;
-    }
-
-    public string TakeEntry()
-    {
-        Console.WriteLine(_promptEntry);
-       _userPromptResponse = Console.ReadLine();
-        return _userPromptResponse;
     }
 }
