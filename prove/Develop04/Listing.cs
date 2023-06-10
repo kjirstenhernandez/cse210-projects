@@ -65,8 +65,9 @@ class Listing : Activity {
 			ConsoleKeyInfo key = Console.ReadKey();
 			if (key.Key == ConsoleKey.Enter)
 			{
-				Console.Write("> ");
-				_responseList.Add(Console.ReadLine());
+                Console.WriteLine("");
+                Console.Write("> ");
+                _responseList.Add("\n");
 			}
 			else
 			{
@@ -74,18 +75,8 @@ class Listing : Activity {
 			}
 		}
 
+        int lines = _responseList.Count( c => c == "\n" );
 
-        // base.InitializeActivity("Countdown");
-        // Console.WriteLine();
-
-        // while (_startTime < _endTime){
-        //     Console.Write("> ");
-        //     _startTime = DateTime.Now;
-        //     _userResponse = Console.ReadLine();
-        //     _responseList.Add(_userResponse);
-
-        // }
-
-        Console.WriteLine ($"Great Job!  You named {_responseList.Count} things!");
+        Console.WriteLine ($"Great Job!  You named {lines} things!");
     }
 }
