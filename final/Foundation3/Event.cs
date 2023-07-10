@@ -30,7 +30,9 @@ public abstract class Event{
     public abstract void DisplayDetailedMessage();
 
     public void DisplayShortMessage(){
-
+        Console.WriteLine($"Event Type: {_eventType}");
+        Console.WriteLine($"Title: {_eventTitle}");
+        Console.WriteLine($"Date: {_date}");
     }
 
     public string GetTitle(){
@@ -45,5 +47,5 @@ public abstract class Event{
     public string GetTime(){
         return _time;
     }
-    
+
 }
