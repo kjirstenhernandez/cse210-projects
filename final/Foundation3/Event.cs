@@ -14,10 +14,6 @@ public abstract class Event{
         _address = address;
     }
 
-    public void SetDate(string date){
-
-    }
-
     public void DisplayStandardMessage(){
         Console.WriteLine($"Title: {_eventTitle}");
         Console.WriteLine($"Description: {_description}");
